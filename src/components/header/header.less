@@ -1,0 +1,43 @@
+@import "../../styles/variables";
+.ant-layout-header{
+  width: 100%;
+  background: #000;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+}
+
+.header-logo{
+  width: 86px;
+  float: left;
+}
+.header-logo-img{
+  height: 42px;
+  width: 86px;
+}
+
+.header-nav{
+  text-align: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  a{
+    display: inline-block;
+    color: white;
+    font-size:18px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    line-height:25px;
+    padding:10px 20px;
+    margin-right: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  a.active{
+    color: @theme-background-color-base;
+    border-bottom: 2px solid @theme-background-color-base;
+  }
+}

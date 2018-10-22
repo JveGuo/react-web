@@ -1,0 +1,79 @@
+@import url('./variables');
+// html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike,
+// strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+// tfoot, thead, tr, th, td ,textarea { margin:0; padding:0;  }
+// address,cite,dfn,em,var, i {font-style:normal;}
+
+// table { border-collapse:collapse; border-spacing:0; }
+// h1, h2, h3, h4, h5, h6, th { font-size: 100%; font-weight: normal; }
+// button,input,select,textarea{font-size:100%;}
+// fieldset,img{ border: 0; }
+// a { text-decoration: none; color: @font-color-base; background: none }
+// ul, ol , li { list-style: none; }
+// input{-wekit-box-shadow:0 0 0 1000px white inset;}
+
+html {
+  height: @pub_height100;
+  width: @pub_height100;
+}
+html,body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif, PingFangSC-Regular;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  color: @font-color-base;
+  height: @pub_height100;
+  width: @pub_height100;
+}
+
+#root {
+  width: @pub_width100;
+  height: @pub_height100;
+}
+
+.App {
+  text-align: center;
+  width: @pub_width100;
+  height: @pub_height100;
+  color: @font-color-base;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+
+// 特殊处理样式 （与其他引用库样式冲突）
+body p {
+  margin: 0;
+}

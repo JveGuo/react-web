@@ -1,28 +1,51 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+// import { asyncLogData } from './redux/actions';
+// import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+
+import { Layout } from 'antd';
+
+import Routes from './routes/router';
+
+import HeaderCon from './components/header/header';
+const { Content } = Layout;
 
 class App extends Component {
+
+  // test = () => {
+  //   const data = {
+  //     name: 'wzyl',
+  //     password: 123456
+  //   }
+  //   // console.log(this.props)
+  //   const {asyncLogData} = this.props;
+  //   asyncLogData(data);
+  // }
+
   render() {
+    const { info } = this.props;
+    console.log(info);
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Layout style={{display: 'flex',width: '100%', height: '100%'}}>
+          <HeaderCon {...this.props}/>
+          <Content style={{flex: '1 1 0'}}>
+            <Routes info={info}/>
+          </Content>
+        </Layout>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  const { info } = state.logInData;
+  return {info};
+};
+
+// const mapDispatchToProps = dispatch => ({
+//   asyncLogData: bindActionCreators(asyncLogData, dispatch)
+// });
+
+export default connect(mapStateToProps, null)(App);
