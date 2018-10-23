@@ -25,7 +25,7 @@ const render = Component => {
 render(Page);
 
 if(module.hot) {
-  module.hot.accept('./App',() => {
+  module.hot.accept('./page',() => {
     render(Page);
   });
 }
